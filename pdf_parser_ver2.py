@@ -466,7 +466,7 @@ class DirectoryPdfParser:
         self.pdf_list = list(self.dir_path.glob("./*.pdf"))  # 複数回パースする必要があるため、リスト化
         self.max_iter = max_iter
         
-        self.pdf_parser = pdf_parser
+        self.pdf_parser = pdf_parser     
     
     def parse_paper_list(self):
         """
@@ -475,43 +475,62 @@ class DirectoryPdfParser:
         paper_list = []
         iter_counter = 0
         for pdf_path in tqdm(self.pdf_list):
-            paper = self.pdf_parser.parse(pdf_path)
-            paper_list.append(paper)
-            iter_counter += 1 # カウンターに加える
-            if iter_counter >= self.max_iter:
-                yield paper_list
+            try:
+                paper = self.pdf_parser.parse(pdf_path)
+                paper_list.append(paper)
+                iter_counter += 1 # カウンターに加える
+                if iter_counter >= self.max_iter:
+                    yield paper_list
+                    paper_list = []
+                    iter_counter = 0
+            except:
+                # 累積を防ぐため
                 paper_list = []
                 iter_counter = 0
+                continue
                 
     def parse_dict_list(self):
         """
-        辞書のリストを返すジェネレータ―
+        Paperオブジェクトのリストを返すジェネレータ―
         """
         paper_list = []
         iter_counter = 0
         for pdf_path in tqdm(self.pdf_list):
-            paper = self.pdf_parser.parse(pdf_path)
-            paper_list.append(paper.toDict())
-            iter_counter += 1 # カウンターに加える
-            if iter_counter >= self.max_iter:
-                yield paper_list
+            try:
+                paper = self.pdf_parser.parse(pdf_path)
+                paper_list.append(paper.toDict())
+                iter_counter += 1 # カウンターに加える
+                if iter_counter >= self.max_iter:
+                    yield paper_list
+                    paper_list = []
+                    iter_counter = 0
+            except:
+                # 累積を防ぐため
                 paper_list = []
                 iter_counter = 0
+                continue
                 
     def parse_dict(self):
         """
-        辞書を返すジェネレータ―
+        Paperオブジェクトのリストを返すジェネレータ―
         """
         paper_dict = {}
         iter_counter = 0
         for pdf_path in tqdm(self.pdf_list):
-            paper = self.pdf_parser.parse(pdf_path)
-            paper_dict[paper.pdf_name] = paper.toDict()
-            iter_counter += 1 # カウンターに加える
-            if iter_counter >= self.max_iter:
-                yield paper_dict
-                paper_list = {}
+            try:
+                paper = self.pdf_parser.parse(pdf_path)
+                paper_dict[paper.pdf_name] = paper.toDict()
+                iter_counter += 1 # カウンターに加える
+                if iter_counter >= self.max_iter:
+                    yield paper_dict
+                    paper_list = {}
+                    iter_counter = 0
+            except:
+                # 累積を防ぐため
+                paper_dict = {}
                 iter_counter = 0
+                continue
+
 
 if __name__ == "__main__":
     

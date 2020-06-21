@@ -1,0 +1,34 @@
+{
+    "directories": [
+        "/mnt/umenas_root/ROBOMECH（ROBOMEC）/2017/PDF",
+	"/mnt/umenas_root/ROBOMECH（ROBOMEC）/2018/PDF",
+	"/mnt/umenas_root/ROBOMECH（ROBOMEC）/2019/PDF",
+	"/mnt/umenas_root/日本ロボット学会/RSJ 2016/pdf",
+	"/mnt/umenas_root/日本ロボット学会/RSJ 2017/pdf",
+	"/mnt/umenas_root/日本ロボット学会/RSJ 2019/pdf"
+    ],
+    "conference_names": [
+        "robomech",
+	"robomech",
+	"robomech",
+	"rsj",
+	"rsj",
+	"rsj"
+    ],
+    "title_position_numbers": [
+        0,
+	0,
+	0,
+	0,
+	0,
+	0
+    ],
+    "dates": [
+	[2017, 5],
+	[2018, 5],
+	[2019, 5],
+	[2016, 8],
+	[2017, 8],
+	[2019, 8]
+    ]
+}

@@ -16,7 +16,13 @@
 	"/mnt/umenas_root/ロボティクスシンポジア/2017/paper",
 	"/mnt/umenas_root/ロボティクスシンポジア/2018",
 	"/mnt/umenas_root/ロボティクスシンポジア/2019/rs2019data/paper",
-	"/mnt/umenas_root/ロボティクスシンポジア/2020/paper"
+	"/mnt/umenas_root/ロボティクスシンポジア/2020/paper",
+        "/mnt/umenas_root/ROBOMECH（ROBOMEC）/2017/PDF",
+	"/mnt/umenas_root/ROBOMECH（ROBOMEC）/2018/PDF",
+	"/mnt/umenas_root/ROBOMECH（ROBOMEC）/2019/PDF",
+	"/mnt/umenas_root/日本ロボット学会/RSJ 2016/pdf",
+	"/mnt/umenas_root/日本ロボット学会/RSJ 2017/pdf",
+	"/mnt/umenas_root/日本ロボット学会/RSJ 2019/pdf"
     ],
     "conference_names": [
         "SSII",
@@ -35,7 +41,13 @@
 	"robosym",
 	"robosym",
 	"robosym",
-	"robosym"
+	"robosym",
+        "robomech",
+	"robomech",
+	"robomech",
+	"rsj",
+	"rsj",
+	"rsj"
     ],
     "title_position_numbers": [
         0,
@@ -54,7 +66,13 @@
 	1,
 	1,
 	1,
-	1
+	1,
+        0,
+	0,
+	0,
+	0,
+	0,
+	0
     ],
     "dates": [
 	[2015,6],
@@ -72,7 +90,13 @@
 	[2017,2],
 	[2018,2],
 	[2019,2],
-	[2020,2]
+	[2020,2],
+	[2017,5],
+	[2018,5],
+	[2019,5],
+	[2016,8],
+	[2017,8],
+	[2019,8]
     ],
     "passwords": [
 	"None"
