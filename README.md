@@ -6,3 +6,5 @@
 - tqdm
 - pdfminer
 - pymongo
+
+client用のDockerfileがおいてあります．
